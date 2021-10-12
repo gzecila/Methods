@@ -79,4 +79,3 @@ When that is done, complete the assignment below (which combines elementary bash
 local copy the "Methods" repo
 
 * Done [AG]
-* I wonder how to move the script to the assignment folder directly via command line [AG]
