@@ -38,15 +38,21 @@ When that is done, complete the assignment below (which combines elementary bash
 
    * The `*.sh` syntax means `all files ending in .sh`
 
+* Done [AG]
+
 0. Now you should be able to execute the file in either of two ways:
 
    0. Type `/bin/bash First-Bash-Script-[Moniker].sh`
 
    0. Type `./First-Bash-Script-[Moniker].sh`
 
+* Done [AG]
+
 0. Capture the magnificent results of your efforts in an output file by adding ` > First-Bash-Script-[Moniker].out` after typing one of the above options to execute the .sh file. For example,
 
    `./First-Bash-Script-[Moniker].sh  > First-Bash-Script-[Moniker].out`
+
+* Done [AG]
 
 0. View the results in two ways:
 
@@ -62,6 +68,8 @@ When that is done, complete the assignment below (which combines elementary bash
 
       * The reason is that your previous invocation of emacs included the `-nw` flag, which is short for `no window` and has the effect of launching emacs inside the shell window
 
+* Done [AG]
+
 0. Update your local copy of the class "Methods" repository:
 
     `cd ~/GitHub/ccarrollATjhuecon/Methods`
@@ -70,4 +78,5 @@ When that is done, complete the assignment below (which combines elementary bash
 0. Move your script to the /Assignments/[##-##]-Write-Your-First-Bash-Script-Using-Emacs in the
 local copy the "Methods" repo
 
-
+* Done [AG]
+* I wonder how to move the script to the assignment folder directly via command line [AG]

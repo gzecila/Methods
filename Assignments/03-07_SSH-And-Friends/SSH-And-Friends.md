@@ -15,12 +15,18 @@ that allow interaction with the remote computer almost as if the user were physi
       * This requires you to have enabled the root user in your VM; if you have not done this, do so using the command `sudo passwd root` and give the root user the same password as the `econ-ark` user (Google for more info)
    * Test whether you have succeeded by using the `whoami` command
       * The answer should be `root`
+
+* The answer is 'econ-ark' rather than 'root' after executing the above lines, I wonder if they are equivalent? [AG]
+
    * `ssh econ-ark@localhost` will initiate a `remote` connection from your own computer to itself
 	  * (By default, in unix your own computer can be addressed as `localhost`)
       * If this is the first time you have connected from your current machine to the remote machine, you will asked to permit the connection va a `key fingerprint` which is a security mechanism. Accept this request
    * If instead of `localhost` you specified some other valid username and hostname, you would connect as that user to that machine instead
       * Assuming that the connection is permitted by firewalls and other security mechanisms...
 	  * And that connecting by ssh has been enabled on the other machine
+
+* When trying to permit the connection via a key fingerprint, I faced issues while entering password. I tried my local computer's password but it didn't work. [AG]
+
 0. You should now be connected to the remote computer on precisely the same footing you would have if you had logged into the computer from a physical connection like a keyboard
    * Confirm that you are logged in as the econ-ark user using the `whoami` command
    * A second proof that you are logged in as the econ-ark user is to use the command `ls`
@@ -49,6 +55,8 @@ We are going to again become root for the purpose of executing this command. Bel
 A Google search for `scp command examples` will turn up a host of other ways to use the command. You can also do a bit of
 prep work so that you do not need to enter your password for the remote machine every time you use the command.
 
+* Done [AG]
+
 ## SSH keys
 
 If you will be connecting regularly from your computer to online resources using ssh tools, it will be convenient for your user to have a a `key` that you can upload to the remote resource machine so that it can recognize your machine without the necessity of always entering a username and password.
@@ -71,6 +79,8 @@ If the keys DO exist already, you need to make sure they have the right permissi
   `sudo chmod 600 ~/.ssh/id_rsa`
   `sudo chmod 644 ~/.ssh/id_rsa.pub`
 
+* Done [AG]
+
 ## Registering your key with a remote resource (GitHub)
 
    Registering your key allows you to interact with a remote machine without the cumbersome requirement to enter a username and password at every step. This is particularly convenient when interacting with GitHub.
@@ -78,6 +88,8 @@ If the keys DO exist already, you need to make sure they have the right permissi
    Instructions for how register your ssh key with your GitHub account [are here](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account)
 
    You should follow those instructions (since your machine should already have a key, you can omit the step of generating one)
+
+
 
    In order to interact with a remote repo without using password or username, you need to adjust GitHub's url for connecting with the remote resource via ssh rather than https.  For example, if you obtained a repo originally by
 
@@ -96,6 +108,8 @@ You would need to change this using a command like:
 
   `git remote set-url origin git@github.com/ccarrollATjhuecon/BST-Shared.git`
 
+* Done [AG]
+
 ## Git Credential Helper
 
 Another way to avoid having always to enter your password is to use a `credential-helper`
@@ -108,6 +122,8 @@ To set up the credential helper, from a shell:
 
    `git config --global credential.helper cache`
    `git config --global credential.helper 'cache --timeout=3600'`
+   
+* Done [AG]
 
 ## Mount A Network Drive
 
@@ -127,3 +143,5 @@ you should see exactly the same listing, because these are two paths to the same
 The command to unmount:
 
 	sudo fusermount -u /mnt/Methods
+
+* Done [AG]
